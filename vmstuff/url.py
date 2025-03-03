@@ -32,7 +32,6 @@ def get_base_url(url: str, /, *, include_path: bool = False) -> str:
     base = f"{parsed.scheme}://{parsed.netloc}"
     
     if include_path and parsed.path:
-        # Remove trailing slash for consistency unless it's the only path component
         path = parsed.path.rstrip("/") if parsed.path != "/" else "/"
         base = f"{base}{path}"
     

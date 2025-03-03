@@ -12,9 +12,7 @@ A Python package containing commonly used functions.
 First, create and activate a virtual environment:
 ```bash
 uv venv
-source .venv/bin/activate  # On Unix/Linux
-# or
-.venv\Scripts\activate  # On Windows
+source .venv/bin/activate
 ```
 
 Then install the package:
@@ -56,9 +54,7 @@ To set up the development environment:
 2. Create and activate a virtual environment:
    ```bash
    uv venv
-   source .venv/bin/activate  # On Unix/Linux
-   # or
-   .venv\Scripts\activate  # On Windows
+   source .venv/bin/activate
    ```
 3. Install development dependencies:
    ```bash
