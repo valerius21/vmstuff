@@ -15,6 +15,7 @@ dependencies = [
     "backoff>=2.2.1",
     "ratelimit>=2.2.1",
     "pydantic>=2.6.1",
+    "selectolax>=0.3.17",
 ]
 
 [project.optional-dependencies]

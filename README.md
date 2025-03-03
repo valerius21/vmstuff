@@ -24,6 +24,7 @@ uv pip install -e .
 
 - URL manipulation and validation
 - HTTP client with retry and rate limiting
+- HTML parsing utilities
 - Modern Python features (3.13+)
 - Type annotations throughout
 
@@ -41,6 +42,27 @@ print(base)  # https://example.com
 # Include the path component
 base_with_path = get_base_url("https://example.com/path?query=1#fragment", include_path=True)
 print(base_with_path)  # https://example.com/path
+```
+
+### HTML Parsing
+
+```python
+from vmstuff import get_all_links_from_html
+
+# Extract all links from HTML
+html = """
+<div>
+    <a href="https://example.com">Link 1</a>
+    <a href="/path">Link 2</a>
+    <a>No href</a>
+</div>
+"""
+links = get_all_links_from_html(html)
+print(links)  # ['https://example.com', '/path']
+
+# Resolve relative URLs against a base URL
+links = get_all_links_from_html(html, base_url="https://base.com")
+print(links)  # ['https://example.com', 'https://base.com/path']
 ```
 
 ### HTTP Client with Retry and Rate Limiting
